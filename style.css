@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700&display=swap");
+
+* {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(0, 70, 70);
+  overflow: hidden;
+  background-image: url("https://rahul-sr.github.io/GlassmorphicLoginForm/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  width: 270px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(100, 100, 100, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.input-box input {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: background 0.3s ease-out, border-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
+}
+
+.input-box input:hover {
+  background: rgba(0, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.input-box label {
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: transform 0.5s;
+  pointer-events: none;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  transform: translateX(-8px) translateY(-30px);
+  font-size: 12px;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin: 5px 0;
+  font-size: 13px;
+  padding: 8px;
+}
+
+.forgot-password:hover {
+  color: rgb(150, 255, 255);
+  text-shadow: 0 0 2px rgb(150, 255, 255);
+}
+
+.icon {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  font-size: 22px;
+  font-style: normal;
+  cursor: pointer;
+  color: rgba(150, 255, 255, 0.6);
+  transition: color 0.3s ease-out;
+}
+
+.icon:hover,
+.icon.reveal {
+  color: white;
+  text-shadow: 0 0 5px rgb(122, 236, 236), 0 0 10px rgb(122, 236, 236);
+}
+
+button {
+  cursor: pointer;
+  margin-bottom: 25px;
+  width: 85%;
+  padding: 12px;
+  font-size: 14px;
+  color: rgb(15, 50, 80);
+  border: 1px solid rgb(122, 236, 236);
+  border-radius: 25px;
+  transition: 0.3s color ease-out, 0.3s background-color ease-out,
+    0.3s border-color ease-out, 0.3s box-shadow ease-out;
+}
+
+.primary,
+.secondary:hover {
+  color: rgb(15, 50, 80);
+  background-color: rgb(150, 255, 255);
+  border-color: rgb(150, 255, 255);
+  box-shadow: 0 0 10px rgb(180, 251, 251);
+}
+
+.secondary,
+.primary:hover {
+  color: rgb(150, 255, 255);
+  background-color: transparent;
+  box-shadow: 0 0 10px rgb(150, 255, 255), 0 0 10px rgb(150, 255, 255) inset;
+  text-shadow: 0 0 5px rgb(150, 255, 255);
+}
